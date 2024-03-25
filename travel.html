@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+        *{
+            padding:0%;
+            margin:0;
+            font-family:'Poppins', sans-seri;
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+
+        }
+        :root{
+            --bg-color:#fff;
+            --text-color:#221314;
+            --second-color:#5a7184;
+            --main-color:#6e54fa;
+            --big-font:6rem;
+            --h2-font:3rem;
+            --p-font:1.1rem;
+        }
+        body{
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            background-size: cover;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD7-rWqn74Fqi6vSq0G6sUDQfq4_65OsDS1g&usqp=CAU);
+            height: 20vh;
+            width: 100%;
+            background-repeat: no-repeat;
+        }
+        header{
+            display: flex;
+            width:100%;
+            z-index: 1000;
+            align-items: center;
+            justify-content: space-between;
+            top:0;
+            right:0;
+            position:flex;
+            background: transparent;
+            padding:30px 18%;
+            transition: ease .40s;
+
+        }
+        .logo{
+            font-size: 30px;
+            letter-spacing: 1px;
+            color: var(--bg-color);
+            font-weight: 600;
+        }
+        .navbar{
+            display: flex;
+        }
+        .navbar a{
+            color: var(--bg-color);
+            font-size: var(--p-font);
+            font-weight: 500;
+            padding:10px 22px;
+            border:4px;
+            transition:  ease .40s;
+        }
+        .navbar a:hover{
+            background-color: var(--bg-color);
+            color:var(--text-color);
+            box-shadow: 5px 10px 30px rgba(94, 93, 93, 0.2);
+            border-radius: 4px;
+        }
+        section{
+            padding:80px 18%
+        }
+        .home{
+            position: relative;
+            width:100%;
+            height:70vh;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            align-items: center;
+        }
+        .home h1{
+            font-size: var(--big-font);
+            color:var(--bg-color);
+            font-family: 'Paytone One', sans-serif;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .home p{
+            color: var(--bg-color);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 35px;
+            margin-bottom: 50px;
+        }
+        .home-btn{
+            display: inline-block;
+            font-size: 20px;
+            padding: 8px 8px;
+            border-radius: px;
+            background-color: var(--bg-color);
+            color: var(--main-color );
+            width: 120px;
+            height: 50px;
+            border-radius: 4px;
+            text-align: center;
+            transition: ease ,40s;
+        }
+        .home-btn:hover{
+            background-color: var(--bg-color);
+            transform: scale(1.1);
+        }
+        .box{
+            margin-top: 200px;
+            text-align: center;
+
+        }
+        .box-h1{
+            color: var(--text-color);
+            font-family: 'Poppins', sans-seri;
+        }
+        .sub-box{
+            display: flex;
+            flex-direction: row;
+            justify-content:  space-between;
+            margin-left:400px;
+            margin-right:400px;
+            padding: 50px 10px;
+        }
+        .turs-imges a img{
+            height: 85px;
+            width:85px;
+            background-color:var(--bg-color);
+            box-shadow: 5px 10px 30px rgb(85 85 85 /20%);
+            margin-bottom:15px;
+            border-radius:4px
+
+        }
+        .turs-imges a :hover{
+            background-color: var(--bg-color);
+            color:var(--text-color);
+            cursor: pointer;
+            box-shadow: 5px 10px 30px rgba(101, 154, 252, 0.445);
+            transition: ease 2s ease 1s;
+        }
+        .box-2{
+           text-align: center;
+        }
+        .title{
+            font-size: 25px;
+            color: var(--text-color);
+            margin-top:10%;
+        }
+        .box-content{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(230px,auto));
+            grid-gap:0rem;
+            margin:3rem 5% 10%;
+            align-items: center;
+        }
+        .box-img{
+            position:relative;
+            transition: all.3s cubic-bezier(.445,.05,.55,.95);
+            will-change:filter;
+            cursor: pointer;
+        }
+        .box-img img{
+            width:90%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .box-img h3{
+            position: absolute;
+            font-size:30px;
+            text-align: right;
+            font-weight:600;
+            color:var(--bg-color);
+            top:35px;
+            right:70px;
+        }
+        .dest-content{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+             margin: 20px 50px 0px;
+
+        }
+        .rating a{
+            color: var(--main-color);
+            font-size:20px;
+        }
+        .location h4{
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .location p{
+            font-size:15px;
+            color:var(--second-color);
+        }
+        .box-img:hover{
+            filter:brightness(100%) hue-rotate(20deg);
+            transform: scale(1.15);
+        }
+        .dest-content-3{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(340px,auto));
+            grid-gap:1.9rem;
+            margin:10px 390px 10px;
+            align-items: center;
+            margin-top:7rem;
+        }
+        .box-3{
+            text-align: center;
+        }
+        .title-3{
+            font-size: 25px;
+            color: var(--text-color);
+            margin-bottom: 85px;
+        }
+        .dest-img{
+            position:relative;
+
+        }
+        .dest-img img{
+            width:90%;
+            height:450px;
+            object-fit: cover;
+            border-radius: 15px;
+            filter:brightness(80%);
+            transition: all.3s cubic-bezier(.445,.05,.55,.95);
+            will-change:filter;
+        }
+        .dest-img h5{
+            position:absolute;
+            font-weight: 500;
+            font-size:var(--p-font);
+            color: var(--bg-color);
+            left:40px;
+            top:80%;
+            letter-spacing: 1px;
+        }
+        .dest-img p{
+            position:absolute;
+            font-weight: 400;
+            font-size:15px;
+            color: var(--bg-color);
+            left:40px;
+            top:85%;
+            letter-spacing: 2px;
+        }
+        .dest-img img:hover{
+            cursor: pointer;
+            filter:brightness(100%) hue-rotate(5deg);
+            transform: scale(1.05);
+        }
+        .box-4{
+            display: flex;
+            flex-wrap:wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin:7% 15% 200px;
+        }
+        .news h2{
+            font-size: var(--h2-font);
+            margin-bottom:6px;
+        }
+        .news p{
+            color:var(--second-color);
+            line-height: 30px;
+            font-size:var(--p-font);
+        }
+        .news p span{
+            color:#c52e81;
+            font-weight: 300;
+        font-size: var(--p-font);
+        }
+
+    .class1{
+        padding:15px 130px 15px 30px;
+        border-radius:15px;
+        box-shadow: 5px 10px 30px rgb(85 85 85 /20%);
+        border:none;
+        outline:none;
+    }
+    .class2{
+        padding:15px 30px 15px 30px;
+        border-radius:15px;
+        box-shadow: 5px 10px 30px rgb(85 85 85 /20%);
+        background-color: var(--main-color);
+        border:none;
+        outline:none;
+    }
+    .box-5{
+        background-color: var(--main-color);
+    }
+    .main{
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .footer{
+        padding:20px 0px;
+    }
+    .list{
+        width:15%;
+        margin:10px 50px 10px;
+    }
+    .list h4{
+        position:relative;
+        font-size:18px;
+        color:var(--bg-color);
+        margin-bottom:15px;
+    }
+    .list ul li:not(list-child){
+        margin-bottom: 15px;
+    }
+    .list ul li a{
+        color:#221314;
+        font-size:var(--p-font);
+        transition: -3s;
+        display: block;
+    }
+    .social a {
+        height:35px;
+        width:35px;
+        background:var(--bg-color);
+        display: inline-flex;
+        align-items:center;
+        justify-content:center;
+        font-size:30px;
+        transition: -3s;
+        border-radius:15px;
+    }
+    .social a :hover{
+        transform:scale(1.05);
+    }
+    .model{
+            position: absolute;
+            display:none;
+            z-index:1;
+            left:0px;
+            width:50%;
+            height: 80%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgb(0,0,0,0.4);
+            padding-top: 60px;
+            top:0px;
+            color:#000;
+            font-size:30px;
+            font-weight:bold;
+            margin:5% 0px 0px 45%;
+    }
+    .close{
+            position:absolute;
+            right: 25px;
+            top:0px;
+            color:#000;
+            font-size:25px;
+            font-weight:bold;
+        }
+        .close:hover,.close:focus{
+            color:red;
+            cursor: pointer;
+        }
+        form{
+            border:none;
+        }
+        input[type=text],input[type=password]{
+            width:100%;
+            padding:12px 20px;
+            margin:8px 0px;
+            display: inline-block;
+            border:1px solid #ccc;
+            box-sizing:border-box;
+        }
+        button{
+            background-color:#04AA6D;
+            color:weight;
+            padding:12px 20px;
+            margin:8px 0px;
+            border:none;
+            curson:pointer;
+            width:100%;
+        }
+        button:hover{
+            opacity:0.8;
+        }
+        .can-btn{
+            width:auto;
+            padding:10px 18px;
+            background-color:#f44336;
+            margin-left:25px;
+        }
+        .imgcontainer{
+            text-align: center;
+            margin:24px 0px 12px 0px;
+        }
+        .bodycontainer{
+            padding:16px;
+        }
+        span.spn{
+            float:right;
+            padding-top:16px;
+            font-size: 25px;
+            color:#281786;
+        }
+        
+        @media  screen and(max-width:30px) {
+            span.psw{
+                display:block;
+                float:none;
+            }
+            .can-btn{
+                width:100%;
+                margin-left:25px;
+            }
+        }
+        .model-content{
+            background-color: #fefefe;
+            margin:5px auto;
+            border:1px solid #888;
+            width:80%;
+        }
+        .animate{
+            -webkit-animation: animatezoom 4s;
+            animation:animatezoom 4
+        }
+        @-webkit-keyframes animatezoom{
+            from{-webkit-transform:scale(0)}
+            to{-webkit-transform:scale(1)}
+        }
+        @keyframes animatezoom{
+            from{transform:scale(0)}
+            to{transform:scale(1)}
+        }
+        
+</style>
+<title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Travel</a>
+        <div class="box-menu" id="box-menu"></div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#box-2">Package</a></li>
+            <li><a href="#box-3">Destination</a></li>
+            <li><a href="#box-5">Contact</a></li>
+            <li><a href="#login.html" onclick="document.getElementById('001').style.display='block'">Login</a></li>
+            <div id="001" class="model">
+                <span onclick="document.getElementById('001').style.display='none'" class="close" >&times;</span>
+                <form action="action_page" method="m-1" class="model-content animate">
+                    <div class="imgcontainer">
+                        <img src="c:\Users\SSF6123\Documents\mountain.png">
+                    </div>
+                    <div class="bodycontainer">
+                        <lable for="username"><b>Username</b></lable>
+                        <input type="text" placeholder="Username" name="username" required>
+                        <lable for="password"><b>Password</b></lable>
+                        <input type="password" placeholder="Password" name="Password" required>
+                        <button type="submit">Login</button>
+                        <lable>
+                        <input type="checkbox" checked="checked"  class="check">remainder me
+                        </lable>
+                    </div>
+                        <div class="finalcontainer" style="background-color:rgb(247, 247, 247)">
+                         <button type="button" class="can-btn" onclick="document.getElementById('001').style.display='none'" >Cancel</button>
+                        <span class="spn">Forgot<span class="pas"> password?</span></a></span>
+                    </div>
+                </form>
+            </div>    
+        </ul>
+    </header>
+    <section>
+        <div class="home" id="home">
+            <h1>Full Mind<br>Travel</h1>
+            <p>Enthusiastically extends extens customer service before <br> best breed convergence completely.</p>
+            <a href="#" class="home-btn">Let's Go</a>
+        </div>
+    </section>
+    <div class="box">
+        <h1 class="box-h1">Start Your Vocation <br> with lot of Services</h1>
+        <div class="sub-box">
+            <div class="turs-imges">
+                <a  href="card.html">
+                     <img src="https://images.pexels.com/photos/5360034/pexels-photo-5360034.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" >
+                </a>
+                <div class="turs-info">
+                    <h2>Ship Crusher</h2></a>
+                    <p>150 Properties</p>
+                </div>
+            </div>
+            <div class="turs-imges">
+                 <a >
+                 <img src="https://media.istockphoto.com/id/1158623408/photo/indian-hindu-veg-thali-food-platter-selective-focus.jpg?b=1&s=612x612&w=0&k=20&c=1AJ_DbtX-tJZsdh8ujrvg5Q7Xl2BWi1wL7pkVSxv0LQ=" class="logo-imges">
+                 </a>
+                 <div class="turs-info">
+                    <h2>Food Turs</h2>
+                    <p>150 Properties</p>
+                </div>
+            </div>
+            <div class="turs-imges">
+                <a >
+                    <img src="https://media.istockphoto.com/id/1298306226/photo/young-woman-riding-bicycle-on-wooden-pier-in-the-maldives.jpg?b=1&s=612x612&w=0&k=20&c=_bqB61OxK_b4UWfYeLwr823cR3KqqkLcclZ3a-q1zQs=" class="logo-imges">
+                </a>
+                <div class="turs-info">
+                    <h2>Summer Rest</h2>
+                    <p>150 Properties</p>
+                </div>
+            </div>
+            <div class="turs-imges">
+                <a >
+                    <img src="https://images.pexels.com/photos/1107717/pexels-photo-1107717.jpeg?auto=compress&cs=tinysrgb&w=600" class="logo-imges">
+                </a>
+                <div class="turs-info">
+                    <h2>Mountains tures</h2>
+                    <P>150 Properties</p>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="box-2" id="box-2">
+        <div class="title">
+            <h2>Our Upcoming <br>Tour Pakage</h2>
+        </div>
+        <div class="box-content">
+            <div class="sub box-content">
+                <div class="box-img">
+                    <img src="https://images.pexels.com/photos/533769/pexels-photo-533769.jpeg?auto=compress&cs=tinysrgb&w=600">
+                    <h3>$499</h3>
+                </div>
+                <div class="dest-content">
+                    <div class="location">
+                        <h4>London</h4>
+                        <p>4H - 5H</p>
+                    </div>
+                    <div class="rating">
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bx-star' ></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="sub box-content">
+                <div class="box-img">
+                    <img src="https://images.pexels.com/photos/2887633/pexels-photo-2887633.jpeg?auto=compress&cs=tinysrgb&w=600">
+                    <h3>$499</h3>
+                </div>
+                <div class="dest-content">
+                    <div class="location">
+                        <h4>China</h4>
+                        <p>4H - 5H</p>
+                    </div>
+                    <div class="rating">
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bx-star' ></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="sub box-content">
+                <div class="box-img">
+                    <img src="https://images.pexels.com/photos/821225/pexels-photo-821225.jpeg?auto=compress&cs=tinysrgb&w=600">
+                    <h3>$499</h3>
+                </div>
+                <div class="dest-content">
+                    <div class="location">
+                        <h4>England</h4>
+                        <p>4H - 5H</p>
+                    </div>
+                    <div class="rating">
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bx-star' ></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="sub box-content">
+                <div class="box-img">
+                    <img src="https://images.pexels.com/photos/12565208/pexels-photo-12565208.jpeg?auto=compress&cs=tinysrgb&w=600">
+                    <h3>$499</h3>
+                </div>
+                <div class="dest-content">
+                    <div class="location">
+                        <h4>Dubai</h4>
+                        <p>4H - 5H</p>
+                    </div>
+                    <div class="rating">
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bxs-star'></i></a>
+                        <a href="#"><i class='bx bx-star' ></i></a>
+                    </div>
+                </div>
+            </div>
+                                  
+        </div>
+
+
+    </div>
+    <div class="box-3" id="box-3">
+        <div class="title-3">
+            <h2>Our Most Popular<br>Destination</h2>
+        </div>
+        <div class="dest-content-3">
+            <div class="dest-img">
+                <img src="https://images.unsplash.com/photo-1509786679719-3d066e68f607?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTE3fHx8ZW58MHx8fHx8">
+                <h5>Manchu Picchu</h5>
+                <p>PERU</p>
+            </div>
+            <div class="dest-img">
+                <img src="https://images.unsplash.com/photo-1527151977613-a89904713c47?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fHw%3D">
+                <h5>Manchu Picchu</h5>
+                <p>PERU</p>
+            </div>
+            <div class="dest-img">
+                <img src="https://images.unsplash.com/photo-1531141445733-14c2eb7d4c1f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTh8fHxlbnwwfHx8fHw%3D">
+                <h5>Manchu Picchu</h5>
+                <p>PERU</p>
+            </div>
+            <div class="dest-img">
+                <img src="https://images.unsplash.com/photo-1553913861-dc2ce76b856c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzZ8fHxlbnwwfHx8fHw%3D">
+                <h5>Manchu Picchu</h5>
+                <p>PERU</p>
+            </div>
+            <div class="dest-img">
+                <img src="https://images.unsplash.com/photo-1498889444388-e67ea62c464b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8ODV8fHxlbnwwfHx8fHw%3D">
+                <h5>Manchu Picchu</h5>
+                <p>PERU</p>
+            </div>
+            <div class="dest-img">
+                <img src="https://images.unsplash.com/photo-1508867743401-21ad68d105b1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OTV8fHxlbnwwfHx8fHw%3D">
+                <h5>Manchu Picchu</h5>
+                <p>PERU</p>
+            </div>
+        </div>
+    </div>
+    <div class="box-4">
+        <div class="news">
+            <h2>News Letter</h2>
+            <p>Follow My Page for  More Information<br><span>Thnak You For All</span></p>
+        </div>
+        
+        <div class="email">
+            <form>
+                <input type="email" class="class1" placeholder="Write your email name" required>
+                <input type="submit" value="submit" class="class2">
+            </form>    
+        </div>
+    </div>
+    <div class="box-5" id="box-5">
+        <div class="footer">
+            <div class="main">
+                <div class="list">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#"> About</a></li>
+                        <li><a href="#">Terms And Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Tours</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#"> About</a></li>
+                        <li><a href="#">Terms And Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Tours</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="#">123 West 21 Potepalli</a></li>
+                        <li><a href="#">India NY 12345</a></li>
+                        <li><a href="#">+(91)-9788232669</a></li>
+                        <li><a href="#">info@mykruturs.com</a></li>
+                        <li><a href="#">+1(123)-5676-6787</a></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h4>Contact</h4>
+                    <div class="social">
+                        <a href="https://www.facebook.com/groups/best.travelers/"><i class='bx bxl-facebook-circle'></i></a>
+                        <a href="https://www.instagram.com/travelandleisure/?hl=en"><i class='bx bxl-instagram-alt' ></i></a>
+                        <a href="https://twitter.com/Roadtrippers/status/1479815308445728771?ref_src=twsrc%5Etfw"><i class='bx bxl-twitter'></i></a>
+                        <a href="https://youtu.be/yLE5bDX7M3Y?si=5VyvYuv3yw87W9qP" ><i class='bx bxl-youtube' ></i></a>
+                        <a href="https://uz.linkedin.com/in/best-travel-702a42179?trk=people-guest_people_search-card"><i class='bx bxl-linkedin-square' ></i></i></a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</html>
